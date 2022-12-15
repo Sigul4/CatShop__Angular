@@ -32,7 +32,3 @@ export const cardsReducer = createReducer(
         return {responsesData: newState.responsesData, filteredData: found || newState.filteredData}
     })
 )
-
-// export function loadReducer(state: ICat, action: Action){
-
-// }

@@ -1,15 +1,11 @@
-
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title>{{cat.name}}</mat-card-title>
-    <mat-card-subtitle>{{cat.origin}}</mat-card-subtitle>
+    <mat-card-title>{{ cat.name }}</mat-card-title>
+    <mat-card-subtitle>{{ cat.origin }}</mat-card-subtitle>
   </mat-card-header>
-  <!-- <img ngIf="cat.image.url" mat-card-sm-image src="{{cat.image.url}}" alt="Photo of a Shiba Inu"> -->
-  <img *ngIf="cat?.image" mat-card-sm-image src="{{cat.image?.url}}">
+  <img *ngIf="cat?.image" mat-card-sm-image src="{{ cat.image?.url }}" />
   <mat-card-content>
-    {{cat.description}}
+    {{ cat.description }}
   </mat-card-content>
-  <mat-card-actions>
-    temperament: {{cat.temperament}}
-  </mat-card-actions>
+  <mat-card-actions> temperament: {{ cat.temperament }} </mat-card-actions>
 </mat-card>

@@ -1,20 +1,28 @@
 <header>
   <mat-toolbar>
     <span>
-        <h1>KOTIACHYY MAGAZ</h1>
+      <h1>KOTIACHYY MAGAZ</h1>
     </span>
   </mat-toolbar>
 </header>
 <main>
   <div class="wrapper">
-    <div class="show-menu__button" [ngStyle]="{left: CardPosition ? '-500px': '0px'}">
-        <div class="example-button-container">
-            <button (click)="onChangeHideless()" mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
-                <p>></p>
-            </button>
-        </div>
+    <div
+      class="show-menu__button"
+      [ngStyle]="{ left: CardPosition ? '-500px' : '0px' }"
+    >
+      <div class="example-button-container">
+        <button
+          (click)="onChangeHideless()"
+          mat-fab
+          color="accent"
+          aria-label="Example icon button with a bookmark icon"
+        >
+          <p>></p>
+        </button>
+      </div>
     </div>
-    <div class="params" [ngStyle]="{left: CardPosition ? '2vw': '-400px'}">
+    <div class="params" [ngStyle]="{ left: CardPosition ? '2vw' : '-400px' }">
       <mat-card>
         <mat-card-header>
           <mat-card-title>Choose filter</mat-card-title>
@@ -24,20 +32,37 @@
         <mat-card-content>
           <div class="group">
             <label for="breed">filter by uploaded breed: </label>
-            <input #input type="text" [formControl]="model" name="breed_input" />
+            <input
+              #input
+              type="text"
+              [formControl]="model"
+              name="breed_input"
+            />
           </div>
           <div class="button-group">
-            <button (click)="onLoadCard()" color="accent" mat-raised-button>Find All</button>
-            <button (click)="onClearCard()" color="warn" mat-raised-button>Clear All</button>
-            <div class="button-bottom" [ngStyle]="{transform: BottomVisibility ? 'rotate(0deg)' : 'rotate(180deg)'}">
+            <button (click)="onLoadCard()" color="accent" mat-raised-button>
+              Find All
+            </button>
+            <button (click)="onClearCard()" color="warn" mat-raised-button>
+              Clear All
+            </button>
+            <div
+              class="button-bottom"
+              [ngStyle]="{
+                transform: BottomVisibility ? 'rotate(0deg)' : 'rotate(180deg)'
+              }"
+            >
               <button (click)="onChangeShowiness()" mat-mini-fab color="accent">
                 V
               </button>
             </div>
           </div>
-          
+
           <div class="slash"></div>
-          <div class="group select_group" [ngStyle]="{height: BottomVisibility ? '0px' : '140px'}">
+          <div
+            class="group select_group"
+            [ngStyle]="{ height: BottomVisibility ? '0px' : '140px' }"
+          >
             <mat-form-field appearance="fill">
               <mat-label>Find breed by select</mat-label>
               <mat-select [(value)]="selected">
@@ -48,13 +73,14 @@
                 <mat-option value="toyg">Toyger</mat-option>
               </mat-select>
             </mat-form-field>
-            <button (click)="onFindBy()" color="accent" mat-raised-button>Find by ☝️</button>
+            <button (click)="onFindBy()" color="accent" mat-raised-button>
+              Find by ☝️
+            </button>
           </div>
         </mat-card-content>
       </mat-card>
     </div>
-    <card-list>
-    </card-list>
+    <card-list> </card-list>
   </div>
 </main>
 <footer></footer>
